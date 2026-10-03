@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#23113d">
+  <meta name="description" content="Демонстраційний ігровий клуб: доміно, лото, кімнати та рейтинги. Гра з ботами на умовні фішки.">
+  <title>Luxary Games — демо ігрового клубу</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2323113d'/%3E%3Crect x='9' y='4' width='14' height='24' rx='3' fill='%23efc86c'/%3E%3Cpath d='M10 16h12' stroke='%2323113d'/%3E%3Cg fill='%2323113d'%3E%3Ccircle cx='16' cy='10' r='2'/%3E%3Ccircle cx='13' cy='20' r='1.5'/%3E%3Ccircle cx='19' cy='24' r='1.5'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#games" data-action="navigate" data-page="games" aria-label="Luxary Games, головна"><span class="brand-mark">◆</span><span>LUXARY<small>GAMES</small></span></a>
+    <span class="demo-badge"><span></span> ДЕМО-КЛУБ</span>
+    <div class="account"><button class="balance" data-action="wallet" aria-label="Демо-гаманець"><span class="coin">◆</span><strong id="balance">1 000</strong><span class="balance-label">фішок</span><span class="balance-plus">+</span></button><button class="avatar" data-action="profile" aria-label="Відкрити профіль">Г</button></div>
+  </header>
+  <div class="shell">
+    <aside class="sidebar"><nav aria-label="Головна навігація" id="navigation"></nav><div class="sidebar-note"><span class="mini-die">◆</span><strong>Твій хід.</strong><p>Твій вечір.<br>Твій ігровий клуб.</p><span class="note-label">ГРА З БОТАМИ</span></div></aside>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><div><p class="eyebrow">ЛАСКАВО ПРОСИМО ДО КЛУБУ</p><h1>Обери свій стіл</h1><p class="muted">Доміно чи лото? Гарна компанія вже за столом.</p></div><button class="button ghost" data-action="rules">Як грати</button></div>
+      <section class="game-grid" aria-label="Ігри">
+        <article class="game-card"><span class="card-label">01 / КЛАСИКА</span><div class="preview-domino"><span class="mini-tile">● ●<hr>● ● ●</span><span class="mini-tile red">●<hr>● ●</span><span class="mini-tile">● ● ●<hr>●</span></div><h2>Доміно</h2><p>Знайомі правила. Нові суперники.</p><div class="card-meta"><span>2–4 гравці</span><span>від 10 фішок</span></div><button class="button gold" data-action="rooms" data-game="classic">Обрати кімнату</button></article>
+        <article class="game-card telephone"><span class="card-label">02 / ТЕЛЕФОН</span><div class="preview-domino"><span class="mini-tile red">● ●<hr>● ● ●</span><span class="score-orb">+10<small>ОЧОК</small></span><span class="mini-tile">● ● ●<hr>● ●</span></div><h2>Доміно «Телефон»</h2><p>Збирай комбінації. Набирай очки.</p><div class="card-meta"><span>2–4 гравці</span><span>від 10 фішок</span></div><button class="button gold" data-action="rooms" data-game="telephone">Обрати кімнату</button></article>
+        <article class="game-card lotto"><span class="card-label">03 / ЛОТО</span><div class="preview-lotto"><span>07</span><span>21</span><span>45</span><span>63</span><span>88</span><span>12</span><span class="covered">34</span><span>56</span><span class="covered">71</span><span>90</span></div><h2>Лото</h2><p>Один квиток. П’ятнадцять шансів.</p><div class="card-meta"><span>2–4 гравці</span><span>від 10 фішок</span></div><button class="button gold" data-action="rooms" data-game="lotto">Обрати кімнату</button></article>
+      </section>
+      <div class="demo-strip"><span class="strip-icon">◇</span><p><strong>Всі фішки — умовні.</strong> Демо працює з ботами, без поповнень та виведення коштів.</p><span class="pill">DEMO</span></div>
+      <section class="section"><div class="section-heading"><h2>Вільні столи</h2><button class="text-button" data-action="rooms">Усі кімнати</button></div><div id="home-rooms"></div></section>
+    </main>
+  </div>
+  <footer>Luxary Games <span>Демонстраційна версія · Умовні фішки · Боти</span><button class="text-button" data-action="rules">Правила клубу</button></footer>
+  <dialog id="modal"><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
